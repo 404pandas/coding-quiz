@@ -37,7 +37,8 @@ main {
 
 /* Aside formatting, font, and color */
 aside {
-    display: flex;
+    position: absolute;
+    margin: 10px;
 }
 
 /* Paragraph formatting, font, and color */
@@ -59,11 +60,12 @@ section {
 }
 
 .timer {
-
+    top: 0;
+    right: 0;
 }
 
 .quiz {
-    
+
 }
 
 /* *************************** */
