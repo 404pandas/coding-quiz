@@ -1,5 +1,4 @@
 # Web APIs: Code Quiz
-
 ## Description
 
 This project is a coding quiz to test my coding knowledge, practice for job interviews, and further my coding skills with API.
@@ -19,7 +18,6 @@ THEN the game is over
 WHEN the game is over
 THEN I can save my initials and my score
 ```
-
 ## Usage
 
 Once deployed the application can be viewed in a traditional desktop web browser.  It it not yet optimized for smaller screens.
@@ -33,7 +31,6 @@ A special thanks to my dog, Cossette. She is a good doggo.
 * [https://www.markdownguide.org/basic-syntax]
 * [https://www.w3schools.com/cssref]
 * [https://www.w3schools.com/js/js_api_intro.asp]
-
 
 ## Links
 * [https://github.com/404pandas/coding-quiz]
