@@ -1,0 +1,133 @@
+/* Universal selector */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Color selectors */
+:root {
+--text: #3A606E;
+--buttons: #8fa18f;
+--off-white: #e0e0e0;
+--dark-text: #2c3133;
+}
+
+/* *************************** */
+/*     Element selectors       */
+/* *************************** */
+
+/*Background color and font family*/
+body {
+    background-color: var(--off-white);
+    font-family:'Baskerville', 'Rockwell Extra Bold', 'New Century Schoolbook', 'Times New Roman', Times, serif
+}
+/*Universal selector*/
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+/* Color selectors */
+:root {
+--text: #3A606E;
+--xanadu: #8fa18f;
+--off-white: #e0e0e0;
+--labels: #2c3133;
+}
+
+/* *************************** */
+/*     Element selectors       */
+/* *************************** */
+
+/*Background formatting, font, and color*/
+body {
+    background-color: var(--off-white);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+/*Header formatting, font, and color*/
+header {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    padding-left: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background: var(--labels);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Main formatting, font, and color */
+main {
+    font-weight: bolder;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+/* Aside formatting, font, and color */
+aside {
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: right;
+    color: var(--labels);
+}
+
+/* Paragraph formatting, font, and color */
+p {
+    margin: 12px;
+    color: var(--text);
+    font-size: large;
+    font-weight: 400;
+    line-height: 1.2;
+}
+
+/* Section formatting, font, and color */
+section {
+    margin: 7px;
+    margin-right: 1%;
+    display: flex;
+    flex-direction: row;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+/* *************************** */
+/*      Class selectors        */
+/* *************************** */
+
+.view-highscores {
+
+}
+
+.timer {
+
+}
+
+.quiz {
+    
+}
+
+/* *************************** */
+/*        ID selectors         */
+/* *************************** */
+
+/* *************************** */
+/*       Media Queries         */
+/* *************************** */
+
+/* Laptop */
+@media screen and (max-width: 1024px) {
+
+}
+
+/* iPads and Tablets */
+@media screen and (max-width: 768px) {
+
+}
+
+/* Mobile devices */
+@media screen and (max-width: 480px) {
+
+}
