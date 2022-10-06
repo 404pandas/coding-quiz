@@ -14,7 +14,7 @@
 <body>
 
 <header>
-<aside class="view-highscores">
+<aside class="view-highscores" href= "./filler.html">
 <p>View Highscores</p>
 </aside>
 
@@ -25,11 +25,38 @@
 
 <main>
 
+<section class="quiz-container">
+  <article id="start">
+    <h1>Coding Quiz Challenge</h1>
+    <p>Try to answer the following code-related questions within the time limit.
+      Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+    </p>
+    <button id="start-quiz">Start Quiz</button>
+    </article>
+  </section>
 
+  <article id="questions">
+    <h2 id="question-title">Insert</h2>
+    <div id="choices"></div>
+  </article>
 
-<section class="quiz">
-</section>
+  <article id="end">
+    <h2>All Done!</h2>
+      <p>Your final score is <span id="final-score"></span>.</p>
+      <p>Enter github username for prospective employers!</p>
+      <p>Username entered will populate as a profile!</p>
+      <p>Good luck on your job hunt, devs!</p>
+    <input type="text" id="github-username" max length="40"/>
+    <button>Submit</button>
+  </article>
+
+  <article id="highscore-list">
+  </article>
 
 </main>
 
+<script src="./assets/js/questions.js"></script>
+<script src="./assets/js/logic"></script>
+
 </body>
+</html>
