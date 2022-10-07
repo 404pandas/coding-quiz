@@ -183,20 +183,6 @@ button:hover {
     box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
 }
 
-.answers {
-    padding: 5px 10px;
-    margin: 10px;
-    display: block;
-    text-align: left;
-}
-
-.answers button {
-    display: flex;
-    padding: 5px 10px;
-    margin: 10px;
-    display: block;
-}
-
 .highscores {
 
 }
@@ -247,8 +233,18 @@ color: var(--dark-blue)
     text-align: center;
 }
 
-#choices {
+#answers {
+    padding: 5px 10px;
+    margin: 10px;
+    display: block;
+    text-align: left;
+}
 
+#answers button {
+    display: flex;
+    padding: 5px 10px;
+    margin: 10px;
+    display: block;
 }
 
 #end {
