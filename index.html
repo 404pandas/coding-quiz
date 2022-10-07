@@ -15,7 +15,7 @@
 
 <header>
 <a class="header" href= "./highscores.html" alt="View Highscores">View Highscores</a>
-<span class="timer">Time: (function) seconds</span>
+<span class="timerText">Time: 4000 seconds</span>
 </header>
 
 <main>
@@ -26,14 +26,14 @@
       <p>Try to answer the following code-related questions within the time limit.
         Keep in mind that incorrect answers will penalize your score/time by ten seconds!
       </p>
-      <button class="alt-text-button"><span class="original">Start Quiz</span><span class="alt">Good luck!</span></button>
+      <button id="start-quiz"><span class="original">Start Quiz</span><span class="alt">Good luck!</span></button>
     </article>
 
     <article id="questions">
       <h2 id="question-title">Question</h2>
       <p>Don't forget to use your resources!</p>
-      <div id="answers">Answer</button></div>
-      <button class="alt-text-button"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
+      <div id="answers">Answer</div>
+      <button id="back-to-start"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
     </article>
 
     <article id="end">
@@ -42,9 +42,9 @@
         <p>Enter github username below for prospective employers to view!</p>
         <p>Usernames entered will auto-populate as a profile link in the highscore list!</p>
         <p>Good luck on your job hunt, devs!</p>
-      <input type="text" id="github-username" max length="40"/>
-      <button class="alt-text-button"><span class="original">Submit</span><span class="alt">Great job!</span></button>
-      <button class="alt-text-button"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
+      <input type=text id="github-username" max length="40"/>
+      <button id="submit"><span class="original">Submit</span><span class="alt">Great job!</span></button>
+      <button id="back-to-start"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
     </article>
 
     <div id="declaration"></div>
