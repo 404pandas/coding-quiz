@@ -1,7 +1,7 @@
 /* Universal selector */
 * {
     box-sizing: border-box;
-    padding: 0;
+    padding: 2%;
     margin: 0;
     font-family: "Baskerville", "Rockwell Extra Bold", "New Century Schoolbook", "Times New Roman", Times, serif;
 
@@ -34,16 +34,12 @@ body {
 header {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
-    padding: 5px;
+    width: 100%;
+    height: 100px;
     font-weight: bold;
-    color: var(--dark-text)
-}
-
-/* Aside formatting, font, and color */
-aside {
-    position: absolute;
-    margin: 10px;
+    color: var(--dark-text);
+    text-decoration: none;
+    border-style: 20px hidden;
 }
 
 /* Main formatting, font, and color */
@@ -59,17 +55,16 @@ section {
     width: 500px;
     justify-content: space-around;
     align-items: flex-start;
-    text-align: left;
+    text-align: center;
     flex-direction: column;
 }
 
 /* Article formatting, font, and color */
 article {
-    display: flex;
     text-align: center;
     position: relative;
-    justify-content: left;
-    align-items: flex-start
+    justify-content: center;
+    padding: 2%;
 
 }
 
@@ -85,11 +80,13 @@ h2 {
 /* Paragraph formatting, font, and color */
 p {
 width: 500px;
+padding: .5%;
 line-height: 150%;
+color: var(light-blue);
 }
 
 input {
-
+padding: 1%;
 }
 
 button {
@@ -98,8 +95,7 @@ display: inline-block;
 overflow: hidden;
 background-color: var(--light-green);
 color: var(--dark-green);
-padding: 5px 10px;
-margin: 10px;
+padding: 10px;
 border: 1px solid var(--dark-green);
 border-radius: 8px;
 line-height: 15px;
@@ -156,28 +152,30 @@ button:hover {
     z-index: 50;
   }
   
-  .alt-text-button:hover:after {
+.alt-text-button:hover:after {
     transform-origin: bottom center;
     transform: skewY(9.3deg) scaleY(2);
-  }
+}
   
-  .alt-text-button:hover span:last-child {
+.alt-text-button:hover span:last-child {
     transform: translateX(-50%) translateY(-100%);
     opacity: 1;
     transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
-  }
+}
 
-.view-highscores {
-
+.header {
+    display: flex;
+    height: 20%;
+    padding: 1%;
+    text-decoration: none;
+    color: var(--dark-blue)
 }
 
 .timer {
-    top: 0;
-    right: 0;
-}
-
-.timer-text {
-
+    display: flex;
+    justify-content: right;
+    padding: 1%;
+    text-decoration: none;
 }
 
 .quiz-container {
@@ -189,12 +187,14 @@ button:hover {
     padding: 5px 10px;
     margin: 10px;
     display: block;
+    text-align: left;
 }
 
 .answers button {
+    display: flex;
     padding: 5px 10px;
     margin: 10px;
-    display: block
+    display: block;
 }
 
 .highscores {
@@ -223,18 +223,28 @@ button:hover {
 /*        ID selectors         */
 /* *************************** */
 
+#view-highscores {
+display: flex;
+justify-content: flex-start;
+color: var(--dark-blue)
+}
+
+#timer-text {
+display: flex;
+justify-content: flex-end;
+color: var(--dark-blue)
+}
+
 #start {
-text-align: center;
+    text-align: center;
 }
 
 #questions {
-    position: relative;
-    justify-content: left;
-    align-items: flex-start;
+    text-align: center;
 }
 
 #question-title {
-
+    text-align: center;
 }
 
 #choices {
@@ -242,7 +252,7 @@ text-align: center;
 }
 
 #end {
-
+    text-align: center
 }
 
 #final-score {
