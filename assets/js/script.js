@@ -10,25 +10,28 @@ var getDeclaration = document.getElementById("declaration");
 var getGithubUsername = document.getElementById("github-username")
 
 // Other variables
+var time = 4000;
+var currentQuestion = 0;
+var timer;
 
 // Start quiz function
-function start(event) {
+function startQuiz(event) {
     event.stopPropagation();
-    document.getElementById("start").className = "hide";
-    document.getElementById("questions").className = "show";
+    getStart.className = "hide";
+    getQuestions.className = "show";
     timerStart();
     getQuestion();
 }
 
 // Get/Show question function
 function getQuestion() {
-var questionString = document.getElementById("questions")[currentQuestion];
-document.getElementById("question-title").textContent = questionString.title;
-document.getElementById("answers").innerHTML = "";
+var questionString = questions[currentQuestion];
+getQuestionTitle.textContent = questionString.title;
+getAnswers.innerHTML = "";
 
-for(var i=0; i<questionValue.answers.length; i++) {
+for(var i=0; i<questionString.answers.length; i++) {
 var btn = document.createElement("button");
-btn.textContent = i+1 + ". " + questionValue.answers[i];
+btn.textContent = i+1 + ". " + questionString.answers[i];
 btn.setAttribute("data", i);
 document.querySelector("#answers").appendChild(btn);
 }
@@ -40,25 +43,25 @@ var element = event.target;
 if (element.matches("button") !== true) {
 }
 else {
-    var questionValue = document.getElementById("answers")[currentQuestion];
-    if(questionValue.answer !== questionValue.choices[element.getAttribute("data")]){
+    var questionString = getAnswers[currentQuestion];
+    if(questionString.answer !== questionString.choices[element.getAttribute("data")]){
         if(time>10){
             time -= 10;
-            document.getElementById("timerText").textContent = "Time: " + time;
+            getTimer.textContent = "Time: " + time;
         }
         else {
             time -= time;
-            document.getElementById("timerText").textContent = "Time: " + time;
+            getTimer.textContent = "Time: " + time;
 quizEnd();
         }
         console.log("You guessed incorrectly!")
-        document.getElementById("declaration").textContent = "Incorrect!";
-        document.getElementById("declaration").className = "show";
+        getDeclaration.textContent = "Incorrect!";
+        getDeclaration.className = "show";
     }
     else {
         console.log("You guessed correctly!");
-        document.getElementById("declaration").textContent = "Correct!";
-        document.getElementById("declaration").className = "show";
+        getDeclaration.textContent = "Correct!";
+        getDeclaration.className = "show";
         currentQuestion++;
         if(currentQuestion>20){
             quizEnd()
@@ -71,22 +74,22 @@ quizEnd();
 }
 
 // End quiz function
-function end() {
+function endQuiz() {
 clearInterval(timer);
-document.getElementById("end").className = "show";
-document.getElementById("final-score").textContent = time;
-document.getElementById("questions").className = "hide";
-document.getElementById("declaration").className = "hide";
+getEnd.className = "show";
+getFinalScore.textContent = time;
+getQuestions.className = "hide";
+getDeclaration.className = "hide";
 }
 
 // Timer function
-function timer() {
+function timerStart() {
 timer = setInterval(function() {
     time--;
     timer.textContent = "Time: " + time;
     if (time === 0) {
         clearInterval(timer);
-        quizEnd();
+        endQuiz();
     }
     // Timer math
     // (20 questions * 60 seconds per question) = 1200 seconds
@@ -97,7 +100,7 @@ timer = setInterval(function() {
 
 // Highscore function
 function highscore() {
-var username = document.getElementById("github-username").value;
+var username = getGithubUsername.value;
 var currentScore = {init: username, score: time};
 var savedScores = JSON.parse(localStorage.getItem(savedScores));
 if(username === ""){
@@ -106,7 +109,7 @@ if(username === ""){
 
 else {
 if (savedScores !== null) {
-localStorage.setItem("savedScores", JSON.stringify(savedSCores));
+localStorage.setItem("savedScores", JSON.stringify(savedScores));
 }
 else {
     savedScores = [currentScore];
