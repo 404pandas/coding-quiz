@@ -27,17 +27,17 @@ Collaborators on this project included instructional staff, TAs, and students fr
 A special thanks to my dog, Cossette. She is a good doggo.
 
 ## References and tutorials utilized
-* [https://www.w3schools.com/html/html5_semantic_elements.asp]
-* [https://www.markdownguide.org/basic-syntax]
-* [https://www.w3schools.com/cssref]
-* [https://www.w3schools.com/js/js_api_intro.asp]
+* [Semantic HTML 5](https://www.w3schools.com/html/html5_semantic_elements.asp)
+* [Basic Syntax](https://www.markdownguide.org/basic-syntax)
+* [CSS](https://www.w3schools.com/cssref)
+* [JS](https://www.w3schools.com/js/)
 
 ## Links
-* [https://github.com/404pandas/coding-quiz]
-* [insert link of deployed site]
+* [Github Repo](https://github.com/404pandas/coding-quiz)
+* [Deployed Site](https://404pandas.github.io/coding-quiz/)
 
 ## Screenshots
-![Screenshot of live image](insert link of screenshot)
+![Screenshot of live image](insertdirectorylinkhere)
 
 ## License
 
