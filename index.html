@@ -14,43 +14,43 @@
 <body>
 
 <header>
-<aside class="view-highscores" href= "./filler.html">
+<aside class="view-highscores" href= "./highscores.html">
 <p>View Highscores</p>
 </aside>
 
 <aside class="timer">
-<p>Time: </p>
+<p>Time: <span id="timer-text"></span></p>
 </aside>
 </header>
 
 <main>
 
-<section class="quiz-container">
-  <article id="start">
-    <h1>Coding Quiz Challenge</h1>
-    <p>Try to answer the following code-related questions within the time limit.
-      Keep in mind that incorrect answers will penalize your score/time by ten seconds!
-    </p>
-    <button id="start-quiz">Start Quiz</button>
-  </article>
+  <section class="quiz-container">
+    <article id="start">
+      <h1>Coding Quiz Challenge</h1>
+      <p>Try to answer the following code-related questions within the time limit.
+        Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+      </p>
+      <button class="alt-text-button"><span class="original">Start Quiz</span><span class="alt">Good luck!</span></button>
+    </article>
 
-  <article id="questions">
-    <h2 id="question-title">Insert</h2>
-    <div id="choices"></div>
-  </article>
+    <article id="questions">
+      <h2 id="question-title">Question</h2>
+      <div class="answers">Answer</button>
+      <button class="alt-text-button"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
+    </article>
 
-  <article id="end">
-    <h3>All Done!</h3>
-      <p>Your final score is <span id="final-score"></span>.</p>
-      <p>Enter github username below for prospective employers to view!</p>
-      <p>Usernames entered will auto-populate as a profile link in the highscore list!</p>
-      <p>Good luck on your job hunt, devs!</p>
-    <input type="text" id="github-username" max length="40"/>
-    <button>Submit</button>
-  </article>
-
-  <article id="highscore-list">
-  </article>
+    <article id="end">
+      <h2>All Done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>Enter github username below for prospective employers to view!</p>
+        <p>Usernames entered will auto-populate as a profile link in the highscore list!</p>
+        <p>Good luck on your job hunt, devs!</p>
+      <input type="text" id="github-username" max length="40"/>
+      <button class="alt-text-button"><span class="original">Submit</span><span class="alt">Great job!</span></button>
+      <button class="alt-text-button"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
+    </article>
+  </section>
 
 </main>
 
