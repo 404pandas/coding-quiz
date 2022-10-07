@@ -30,15 +30,35 @@ header {
     display: flex;
 }
 
+/* Aside formatting, font, and color */
+aside {
+    position: absolute;
+    margin: 10px;
+}
+
 /* Main formatting, font, and color */
 main {
     display: flex;
 }
 
-/* Aside formatting, font, and color */
-aside {
-    position: absolute;
-    margin: 10px;
+/* Section formatting, font, and color */
+section {
+    display: flex;
+}
+
+/* h1 formatting, font, and color */
+h1 {
+
+}
+
+/* h2 formatting, font, and color */
+h2 {
+
+}
+
+/* h3 formatting, font, and color */
+h3 {
+
 }
 
 /* Paragraph formatting, font, and color */
@@ -46,9 +66,12 @@ p {
 
 }
 
-/* Section formatting, font, and color */
-section {
-    display: flex;
+input {
+
+}
+
+button {
+
 }
 
 /* *************************** */
@@ -64,13 +87,45 @@ section {
     right: 0;
 }
 
-.quiz {
+.quiz-container {
 
 }
 
 /* *************************** */
 /*        ID selectors         */
 /* *************************** */
+
+#start {
+
+}
+
+#start-quiz {
+
+}
+
+#question-title {
+
+}
+
+#choices {
+
+}
+
+#end {
+
+}
+
+#final-score {
+
+}
+
+#github-username {
+
+}
+
+#highscore-list {
+
+}
 
 /* *************************** */
 /*       Media Queries         */
