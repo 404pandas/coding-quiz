@@ -5,9 +5,8 @@ var start = document.getElementById("start");
 var questions = document.getElementById("questions");
 var questiontitle = document.getElementById("question-title");
 var answers = document.getElementById("answers");
-var end = document.getElementById("");
+var end = document.getElementById("end");
 var declaration = document.getElementById("declaration");
-var start = document.getElementById("");
 
 // Start quiz function
 function start(event) {
@@ -19,13 +18,31 @@ function start(event) {
 }
 
 // Get/Show question function
+function getQuestions() {
 
-// Click question function
+}
+
+// Click answer function
+function clickAnswer (event) {
+
+}
 
 // End quiz function
+function end() {
+    
+}
 
 // Timer function
+function time() {
 
+
+}
 // Highscore function
+function highscore() {
+
+}
 
 // Click query selectors function
+start quiz
+click answers
+submit initials
