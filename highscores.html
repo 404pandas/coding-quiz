@@ -1,24 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Metadata -->
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Coding Quiz Challenge</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Highscores — Coding Quiz</title>
 </head>
-
 <body>
+
+  <header>
+    <a class="nav-link" href="./index.html">Back to Quiz</a>
+  </header>
+
   <main>
-    <section class="quiz-container">
-        <h1>Highscores</h1>
-        <ol id="highscores"></ol>
-        <a href="index.html"><button class="alt-text-button" id="back-to-start"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button></a>
-        <button class="alt-text-button" id="clear-highscores"><span class="original">Clear Highscores</span><span class="alt">Are you sure?</span></button>
+    <section class="highscores-card card">
+      <h1>Highscores</h1>
+      <ol id="highscores" class="highscores-list"></ol>
+      <div class="btn-row">
+        <a href="./index.html" class="btn primary-btn">Go Again</a>
+        <button class="btn ghost-btn" id="clear-highscores">Clear Scores</button>
+      </div>
     </section>
-    <script src="./assets/js/highscores.js"></script>
   </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="./assets/js/highscores.js"></script>
 </body>
+</html>

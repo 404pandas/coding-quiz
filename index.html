@@ -1,59 +1,84 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<!-- Metadata -->
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-  <title>Coding Quiz</title>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./assets/css/reset.css" />
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Coding Quiz Challenge</title>
 </head>
-
 <body>
 
-<header>
-<a class="header" href= "./highscores.html" alt="View Highscores">View Highscores</a>
-<span class="timerText">Time: 4000 seconds</span>
-</header>
+  <header>
+    <a class="nav-link" href="./highscores.html">View Highscores</a>
+    <div class="timer-wrap">
+      <span id="timer-display" class="timer-text">75s</span>
+      <div class="timer-track">
+        <div id="timer-bar" class="timer-bar"></div>
+      </div>
+    </div>
+  </header>
 
-<main>
+  <main>
 
-  <section class="quiz-container">
-    <article id="start">
+    <!-- ── START SCREEN ── -->
+    <section id="start" class="start-card card">
       <h1>Coding Quiz Challenge</h1>
-      <p>Try to answer the following code-related questions within the time limit.
-        Keep in mind that incorrect answers will penalize your score/time by ten seconds!
+      <p>
+        Test your JavaScript knowledge before the clock runs out. You have
+        <strong>75 seconds</strong> — every wrong answer costs you
+        <strong>10 seconds</strong>. Your remaining time is your score.
       </p>
-      <button class="alt-text-button" id="start-quiz"><span class="original">Start Quiz</span><span class="alt">Good luck!</span></button>
-    </article>
+      <button class="btn primary-btn" id="start-quiz">Start Quiz</button>
+    </section>
 
-    <article id="questions">
-      <h2 id="question-title">Question</h2>
-      <p>Don't forget to use your resources!</p>
-      <div id="answers">Answer</div>
-      <button class="alt-text-button" id="back-to-start"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
-    </article>
+    <!-- ── QUESTIONS SCREEN ── -->
+    <section id="questions" class="card hidden">
+      <div class="question-body">
+        <div class="question-meta">
+          <span id="q-progress" class="q-progress">Question 1 / 10</span>
+        </div>
+        <h2 id="question-title" class="question-title"></h2>
+        <div id="answers" class="answers-grid"></div>
+        <div id="declaration" class="feedback"></div>
+      </div>
+      <button class="btn ghost-btn back-btn" id="back-to-start-quiz">Back to Start</button>
+    </section>
 
-    <article id="end">
-      <h2>All Done!</h2>
-        <p>Your final score is <span id="final-score"></span>.</p>
-        <p>Enter github username below for prospective employers to view!</p>
-        <p>Usernames entered will auto-populate as a profile link in the highscore list!</p>
-        <p>Good luck on your job hunt, devs!</p>
-      <input type=text id="github-username" max length="40"/>
-      <button class="alt-text-button" id="submit"><span class="original">Submit</span><span class="alt">Great job!</span></button>
-      <button class="alt-text-button" id="back-to-start"><span class="original">Back to Start</span><span class="alt">Are you sure?</span></button>
-    </article>
+    <!-- ── END SCREEN ── -->
+    <section id="end" class="card hidden">
+      <div class="end-row">
+        <h2>All Done!</h2>
+      </div>
+      <div class="end-row score-display">
+        <span class="score-label">Your Score</span>
+        <span id="final-score" class="score-number">0</span>
+        <span class="score-unit">seconds</span>
+      </div>
+      <div class="end-row">
+        <p>Enter a username to save your score to the leaderboard.</p>
+      </div>
+      <div class="end-row input-row">
+        <input
+          type="text"
+          id="github-username"
+          class="text-input"
+          placeholder="Your username..."
+          maxlength="40"
+          autocomplete="off"
+        />
+      </div>
+      <div class="end-row btn-row">
+        <button class="btn primary-btn" id="submit-score">Submit Score</button>
+        <button class="btn ghost-btn" id="back-to-start-end">Back to Start</button>
+      </div>
+    </section>
 
-    <div id="declaration"></div>
-  </section>
+  </main>
 
-</main>
-
-<script src="./assets/js/questions.js"></script>
-<script src="./assets/js/script"></script>
-
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="./assets/js/questions.js"></script>
+  <script src="./assets/js/script.js"></script>
 </body>
 </html>
