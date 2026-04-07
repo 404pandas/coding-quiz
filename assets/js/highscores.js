@@ -20,7 +20,7 @@ function renderHighscores() {
     li.innerHTML =
       "<span class='rank'>#" + (i + 1) + "</span>" +
       "<span class='score-name'>" + entry.name + "</span>" +
-      "<span class='score-val'>" + entry.score + "s</span>";
+      "<span class='score-val'>" + entry.score + " / 10</span>";
     list.appendChild(li);
   });
 

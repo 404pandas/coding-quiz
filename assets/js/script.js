@@ -17,6 +17,7 @@ var QUESTIONS_PER_ROUND = 10;
 var timeLeft        = TOTAL_TIME;
 var currentQuestion = 0;
 var timerInterval   = null;
+var correctCount    = 0;   // number of correct answers this round
 var finalScore      = 0;   // captured at quiz end — not affected by later state changes
 var quizEnded       = false; // guard against double endQuiz calls
 var questions       = [];  // active set for this round — filled by pickQuestions()
@@ -74,6 +75,7 @@ function stopTimer() {
 function startQuiz() {
   pickQuestions();
   currentQuestion = 0;
+  correctCount = 0;
   timeLeft = TOTAL_TIME;
   finalScore = 0;
   quizEnded = false;
@@ -139,6 +141,7 @@ function handleAnswer(event) {
   var correct = questions[currentQuestion].answer;
 
   if (chosen === correct) {
+    correctCount++;
     btn.classList.add("correct");
     feedbackDiv.textContent = "Correct!";
     feedbackDiv.className = "feedback correct-text";
@@ -184,7 +187,7 @@ function handleAnswer(event) {
 function endQuiz() {
   if (quizEnded) return;
   quizEnded = true;
-  finalScore = timeLeft; // freeze the score right now
+  finalScore = correctCount; // score = number of correct answers
   stopTimer();
   gsap.to(questionsSection, {
     opacity: 0, y: -30, duration: 0.3, ease: "power2.in",
@@ -199,7 +202,7 @@ function endQuiz() {
       var counter = { val: 0 };
       gsap.to(counter, {
         val: finalScore,
-        duration: 1.2,
+        duration: finalScore > 0 ? 1.0 : 0.3,
         ease: "power2.out",
         delay: 0.3,
         onUpdate: function () {
